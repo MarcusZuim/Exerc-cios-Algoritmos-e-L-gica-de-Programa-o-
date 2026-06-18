@@ -30,7 +30,7 @@ limpatela
     se (resp = 1) entao
       para l de 1 ate 4 faca
         para c de 1 ate 4 faca
-          escreva (m[l,c]:4)
+          escreva (m[l,c]:3)
         fimpara
           escreval ()
       fimpara
@@ -39,11 +39,10 @@ limpatela
         para l de 1 ate 4 faca
           para c de 1 ate 4 faca
             se (l = c) entao
-              m[l,c] <- m[l,c]
+              escreva (m[l,c]:3)
             senao
-              m[l,c] <- 0
+              escreva (" 0")
             fimse
-            escreva (m[l,c]:3)
           fimpara
             escreval ()
         fimpara
@@ -52,11 +51,10 @@ limpatela
             para l de 1 ate 4 faca
               para c de 1 ate 4 faca
                 se (l > c) entao
-                  m[l,c] <- m[l,c]
+                  escreva (m[l,c]:3)
                 senao
-                  m[l,c] <- 0
+                  escreva (" 0 ")
                 fimse
-                escreva (m[l,c]:3)
               fimpara
                 escreval ()
             fimpara
@@ -65,11 +63,10 @@ limpatela
               para l de 1 ate 4 faca
                 para c de 1 ate 4 faca
                   se (l < c) entao
-                    m[l,c] <- m[l,c]
+                    escreva (m[l,c]:3)
                   senao
-                    m[l,c] <- 0
+                    escreva (" 0 ")
                   fimse
-                  escreva (m[l,c]:3)
                 fimpara
                   escreval ()
               fimpara
