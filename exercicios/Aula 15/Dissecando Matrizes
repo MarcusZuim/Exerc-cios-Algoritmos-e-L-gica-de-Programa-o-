@@ -1,0 +1,83 @@
+Algoritmo "Dissecando Matrizes"
+
+Var
+m: vetor[1..4,1..4] de inteiro
+l,c, resp: inteiro
+
+
+Inicio
+aleatorio 1,30
+  para l de 1 ate 4 faca
+    para c de 1 ate 4 faca
+      escreval ("Escreva o valor para a posicao [",l,",",c,"]: ")
+      leia (m[l,c])
+    fimpara
+  fimpara
+aleatorio off
+limpatela
+    repita
+    escreval ("MENU DE OPCOES ")
+    escreval ("=======================")
+    escreval ("[1] Mostrar a matriz: ")
+    escreval ("[2] Diagonal Principal: ")
+    escreval ("[3] Triangulo Inferior: ")
+    escreval ("[4] Triangulo Superior: ")
+    escreval ("[5] Sair")
+    escreval ("=============== OPCAO: ")
+    leia (resp)
+    limpatela
+
+    se (resp = 1) entao
+      para l de 1 ate 4 faca
+        para c de 1 ate 4 faca
+          escreva (m[l,c]:4)
+        fimpara
+          escreval ()
+      fimpara
+    senao
+      se (resp = 2) entao
+        para l de 1 ate 4 faca
+          para c de 1 ate 4 faca
+            se (l = c) entao
+              m[l,c] <- m[l,c]
+            senao
+              m[l,c] <- 0
+            fimse
+            escreva (m[l,c]:3)
+          fimpara
+            escreval ()
+        fimpara
+        senao
+          se (resp =3) entao
+            para l de 1 ate 4 faca
+              para c de 1 ate 4 faca
+                se (l > c) entao
+                  m[l,c] <- m[l,c]
+                senao
+                  m[l,c] <- 0
+                fimse
+                escreva (m[l,c]:3)
+              fimpara
+                escreval ()
+            fimpara
+          senao
+            se (resp = 4) entao
+              para l de 1 ate 4 faca
+                para c de 1 ate 4 faca
+                  se (l < c) entao
+                    m[l,c] <- m[l,c]
+                  senao
+                    m[l,c] <- 0
+                  fimse
+                  escreva (m[l,c]:3)
+                fimpara
+                  escreval ()
+              fimpara
+            senao
+              escreval ("Encerrando o programa...")
+            fimse
+          fimse
+      fimse
+    fimse
+    ate (resp = 5)
+Fimalgoritmo
