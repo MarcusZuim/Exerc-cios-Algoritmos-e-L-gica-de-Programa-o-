@@ -1,4 +1,4 @@
-Algoritmo "Esta apto a dirigir?"
+Algoritmo "Aluno Aprovado ou Reprovado"
 
 var
    n1, n2, nT, media: real

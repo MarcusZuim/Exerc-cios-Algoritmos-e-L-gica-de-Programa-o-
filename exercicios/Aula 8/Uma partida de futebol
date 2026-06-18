@@ -1,0 +1,43 @@
+Algoritmo "Uma partida de Futebol"
+
+var
+  golsC, golsV, difGols: inteiro
+  timeC, timeV: caractere
+inicio
+  escreval ("----------------------------")
+  escreval ("     PARTIDA DE FUTEBOL     ")
+  escreval ("----------------------------")
+  escreval ("Qual o time da casa? ")
+  leia (timeC)
+  escreval ("Qual o time visitante? ")
+  leia (timeV)
+  limpatela
+  escreval ("------------------------------")
+  escreval ("" ,timeC:10, " X ",timeV  )
+  escreval ("------------------------------")
+  escreval ("Quantos gols do " ,maiusc(timeC), "?")
+  leia (golsC)
+  escreval ("Quantos gols do " ,maiusc(timeV), "?")
+  leia (golsV)
+    se (golsC > golsV) entao
+      difGols <- golsC - golsV
+      escreval ("Vitória do " ,maiusc(timeC), " jogando em casa!")
+        se (difGols >= 3) entao
+          escreval ("GOLEADA DO TIME DA CASA! Diferença de ",difGols, " gols!")
+        senao
+          escreval ("Jogo acirrado! Diferença de ",difgols, " gols")
+        fimse
+    senao
+      se (golsC < golsV) entao
+        difGols <- golsV - golsC
+        escreval ("Vitória do " ,maiusc(timeV), " jogando fora de casa!")
+          se (difGols >= 3) entao
+            escreval ("PASSEIO FORA DE CASA! Diferença de ",difGols, " gols!")
+              senao
+                escreval ("Jogo acirrado! Diferença de ",difgols, " gols")
+          fimse
+        senao
+          escreval ("Jogo termina empatado! Tudo igual")
+      fimse
+    fimse
+fimalgoritmo
