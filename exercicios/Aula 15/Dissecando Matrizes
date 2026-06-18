@@ -16,6 +16,7 @@ aleatorio 1,30
 aleatorio off
 limpatela
     repita
+    escreval ()
     escreval ("MENU DE OPCOES ")
     escreval ("=======================")
     escreval ("[1] Mostrar a matriz: ")
@@ -39,9 +40,9 @@ limpatela
         para l de 1 ate 4 faca
           para c de 1 ate 4 faca
             se (l = c) entao
-              escreva (m[l,c]:3)
+              escreva ( m[l,c] )
             senao
-              escreva (" 0")
+              escreva (" 0":2)
             fimse
           fimpara
             escreval ()
@@ -51,9 +52,9 @@ limpatela
             para l de 1 ate 4 faca
               para c de 1 ate 4 faca
                 se (l > c) entao
-                  escreva (m[l,c]:3)
+                  escreva (m[l,c])
                 senao
-                  escreva (" 0 ")
+                  escreva (" 0 ":2)
                 fimse
               fimpara
                 escreval ()
