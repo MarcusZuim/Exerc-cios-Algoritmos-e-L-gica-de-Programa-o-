@@ -1,0 +1,25 @@
+Algoritmo "Contador Inteligente"
+
+var
+  comecoContador, fimContador: inteiro
+inicio
+  escreval ("----------------------------")
+  escreval ("    CONTADOR INTELIGENTE    ")
+  escreval ("----------------------------")
+  escreval ("Inicio: ")
+  leia (comecoContador)
+  escreval ("Fim: ")
+  leia (fimContador)
+  limpatela
+    se (comecoContador < fimContador) entao
+      enquanto (comecoContador <= fimcontador) faca
+        escreval ("",comecoContador, "...")
+        comecoContador <- comecoContador + 1
+      fimenquanto
+    senao
+      enquanto (comecoContador >= fimContador) faca
+      escreval ("",comecoContador, "...")
+      comecoContador <- comecoContador - 1
+      fimenquanto
+    fimse
+fimalgoritmo
