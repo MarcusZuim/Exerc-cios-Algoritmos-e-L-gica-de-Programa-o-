@@ -1,0 +1,35 @@
+Algoritmo "Super Contador"
+
+var
+  resp, c: inteiro
+inicio
+  repita
+    escreval("=====================")
+    escreval ("|      M E N U     |")
+    escreval("=====================")
+    escreval ("|  [1] De 1 ate 10 |")
+    escreval ("|  [2] De 10 ate 1 |")
+    escreval ("|  [3] Sair...     |")
+    escreval ("====================")
+    leia (resp)
+      se (resp = 1) entao
+        c <- 0
+          enquanto (c <= 10) faca
+            escreva (c, "...")
+            c <- c +1
+          fimenquanto
+          escreval ()
+      senao
+        se (resp = 2) entao
+          c <- 10
+            enquanto (c >= 0) faca
+              escreva (c, "...")
+              c <- c - 1
+            fimenquanto
+            escreval ()
+        senao
+          escreva ("Saindo aqui...")
+        fimse
+      fimse
+  ate (resp = 3)
+fimalgoritmo

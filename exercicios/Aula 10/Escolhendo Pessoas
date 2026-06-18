@@ -1,0 +1,39 @@
+Algoritmo "Escolhendo Pessoas"
+
+var
+  sexo, continue: caractere
+  idade, cabelo, totHomem, totMulher: inteiro
+inicio
+totHomem <- 0
+totMulher <- 0
+repita
+  escreval ("=============================")
+  escreval ("      SELETOR DE PESSOAS     ")
+  escreval ("=============================")
+  escreval ("Qual o Sexo? [M/F] ")
+  leia (sexo)
+  escreval ("Qual a idade? ")
+  leia (idade)
+  escreval ("Qual a cor do cabelo? ")
+  escreval ("----------------------")
+  escreval ("[1] Preto")
+  escreval ("[2] Castanho")
+  escreval ("[3] Loiro")
+  escreval ("[4] Ruivo")
+  leia (cabelo)
+  escreval ("Deseja continuar ?")
+  leia (continue)
+    se ((maiusc(sexo) = "M") e (idade >= 18) e (cabelo = 2)) entao
+      totHomem <- totHomem + 1
+    fimse
+      se ((maiusc(sexo) = "F") e (idade >= 25) e (idade <=30) e (cabelo = 3)) entao
+        totMulher <- totMulher + 1
+      fimse
+ate (maiusc(continue) = "N")
+limpatela
+escreval ("-----------------------------")
+escreval ("       RESULTADO FINAL       ")
+escreval ("-----------------------------")
+escreval ("Total de homem com mais de 18 e cabelos castanhos: ", totHomem)
+escreval ("Total de mulheres com idade entre 25 e 30 anos e cabelos loiros: ",totMulher)
+fimalgoritmo
