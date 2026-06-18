@@ -1,0 +1,24 @@
+Algoritmo "Esta apto a dirigir?"
+
+var
+    idade, anoAtual, anoNasc: inteiro
+
+inicio
+    escreval ("--------------------------------------")
+    escreval ("       DEPARTAMENTO DE TRANSITO       ")
+    escreval ("--------------------------------------")
+    escreval ("Ano Atual (yyyy): ")
+    leia (anoAtual)
+    escreval ("Ano de Nascimento: ")
+    leia (anonasc)
+    idade <- anoAtual - anoNasc
+        se (idade >= 18) entao
+            escreval ("----------STATUS---------")
+            escreval ("Idade: ", idade, " Anos")
+            escreval ("APTO A TIRAR A CARTEIRA")
+            senao
+                escreval ("----------STATUS---------")
+                escreval ("Idade: ", idade, " Anos")
+                escreval ("NÃO ESTÁ APTO A TIRAR A CARTEIRA")
+        fimse
+fimalgoritmo
