@@ -1,0 +1,26 @@
+Algoritmo "Esta apto a dirigir?"
+
+var
+   n1, n2, nT, media: real
+
+inicio
+    escreval ("--------------------------------------")
+    escreval ("             SISTEMA UNIRP            ")
+    escreval ("--------------------------------------")
+    escreval ("Primeira Nota: ")
+    leia (n1)
+    escreval ("Segunda Nota: ")
+    leia (n2)
+    escreval ("Nota de trabalho: ")
+    leia (nT)
+    media <- (n1 + n2 + nT) / 3
+      se (media >= 6.51) entao
+        escreval ("-------------------------------")
+        escreval ("MEDIA: ",media:1:2)
+        escreval ("ALUNO APROVADO")
+          senao
+            escreval ("-------------------------------")
+            escreval ("MEDIA: ",media:1:2)
+            escreval ("ALUNO REPROVADO")
+      fimse
+fimalgoritmo
