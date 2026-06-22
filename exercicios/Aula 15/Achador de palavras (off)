@@ -1,0 +1,35 @@
+Algoritmo "ACHADOR DE PALAVRAS"
+
+Var
+   resp, tentativaPc : caractere
+   tent : inteiro
+   tempoEstimado, tempoMin, tempoSeg: real
+Inicio
+tent <- 0
+escreval ("Digite uma palavra: ")
+escreval ("Por questões de praticidade e velocidade, prefira escolher uma palavra pequena! ")
+leia (resp)
+limpatela
+
+aleatorio on
+leia (tentativaPc)
+enquanto (pos(minusc(resp), minusc(tentativaPc)) = 0) faca
+   limpatela
+   escreval (tentativaPC)
+   tent <- tent + 1
+   leia (tentativaPc)
+fimenquanto
+aleatorio off
+limpatela
+escreval ("Achei sua palavra! ")
+  escreval ("Sua palavra é ", resp)
+  escreval ("O numero de tentativas para acertar a sua palavra foi de ", tent, " tentativas")
+  tempoEstimado <- tent * 0.008
+    se (tempoEstimado >= 60) entao
+      tempoMin <- tempoEstimado div 60
+      tempoSeg <- tempoEstimado mod 60
+      escreval ("Tempo estimado até o computador encontrar a resposta : ", tempoMin,"m ",tempoSeg:4:2, "s.")
+    senao
+      escreval ("Tempo estimado até o computador encontrar a resposta : ",tempoEstimado:4:2, "s.")
+    fimse
+Fimalgoritmo
