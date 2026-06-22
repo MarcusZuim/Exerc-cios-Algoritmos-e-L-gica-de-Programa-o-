@@ -2,7 +2,7 @@ Algoritmo "Jogo da Velha"
 
 Var
  m: vetor[1..3,1..3] de inteiro
- l,c,cont,x,o,xVenceu,casasVazias,xVencedor, oVencedor, empate: inteiro
+ l,c,cont,x,o,xVenceu,casasVazias,xVencedor, oVencedor, empate, jogadaValida: inteiro
  resp: caractere
 
 procedimento desenha_tabela()
@@ -42,15 +42,27 @@ cont <- 1
  desenha_tabela ()
  escreval ("Vai jogar [X] em qual posição ?")
  leia (x)
- 
- para l de 1 ate 3 faca
-   para c de 1 ate 3 faca
-     se (m[l,c] = x) entao
-       m[l,c] <- 0
-     fimse
+ se (x > 9) ou (x < 1) entao
+   escreval ("Numero ",x," fora da tabela, perdeu a vez!")
+   escreval ("Aperte ENTER para continuar ")
+   leia (resp)
+ senao
+   jogadaValida <- 0
+   para l de 1 ate 3 faca
+     para c de 1 ate 3 faca
+       se (m[l,c] = x) entao
+         m[l,c] <- 0
+         jogadaValida <- 1
+       fimse
+     fimpara
    fimpara
- fimpara
- desenha_tabela ()
+   se (jogadaValida = 0) entao
+     escreval ("Essa posição já está ocupada! Perdeu a vez")
+     escreval ("Aperte ENTER para continuar")
+     leia (resp)
+   fimse
+ fimse
+ desenha_tabela()
   se (m[1,1]=0) e (m[1,2]=0) e (m[1,3]=0) entao
     xVenceu <- 1
   fimse
@@ -75,7 +87,7 @@ cont <- 1
   se (m[1,3]=0) e (m[2,2]=0) e (m[3,1]=0) entao
     xVenceu <- 1
   fimse
-  
+
    casasVazias <- 0
    para l de 1 ate 3 faca
      para c de 1 ate 3 faca
@@ -87,20 +99,32 @@ cont <- 1
    se (casasVazias = 0) e (xVenceu = 2) entao
      xVenceu <- 3
    fimse
-  
-  
+
+
   se (xVenceu = 2) entao
  escreval ("Vai jogar [O] em qual posição ?")
  leia (o)
- 
- para l de 1 ate 3 faca
-   para c de 1 ate 3 faca
-     se (m[l,c] = o) entao
-       m[l,c] <- 11
-     fimse
+ se (o > 9) ou (o < 1) entao
+   escreval ("Numero ",o," fora da tabela, perdeu a vez!")
+   escreval ("Aperte ENTER para continuar")
+   leia (resp)
+ senao
+   jogadaValida <- 0
+   para l de 1 ate 3 faca
+     para c de 1 ate 3 faca
+       se (m[l,c] = o) entao
+         m[l,c] <- 11
+         jogadaValida <- 1
+       fimse
+     fimpara
    fimpara
- fimpara
-desenha_tabela ()
+   se (jogadaValida = 0) entao
+     escreval ("Essa posição já está ocupada! Perdeu a vez")
+     escreval ("Aperte ENTER para continuar")
+     leia (resp)
+   fimse
+ fimse
+ desenha_tabela()
 
   se (m[1,1]=11) e (m[1,2]=11) e (m[1,3]=11) entao
     xVenceu <- 0
