@@ -2,8 +2,7 @@ Algoritmo "ACHADOR DE PALAVRAS"
 
 Var
    resp, tentativaPc : caractere
-   tent : inteiro
-   tempoEstimado, tempoMin, tempoSeg: real
+   tempoEstimado, tempoMin, tempoSeg, tent: real
 Inicio
 tent <- 0
 escreval ("Digite uma palavra: ")
@@ -25,11 +24,12 @@ escreval ("Achei sua palavra! ")
   escreval ("Sua palavra é ", resp)
   escreval ("O numero de tentativas para acertar a sua palavra foi de ", tent, " tentativas")
   tempoEstimado <- tent * 0.008
+
     se (tempoEstimado >= 60) entao
       tempoMin <- tempoEstimado div 60
       tempoSeg <- tempoEstimado mod 60
-      escreval ("Tempo estimado até o computador encontrar a resposta : ", tempoMin,"m ",tempoSeg:4:2, "s.")
+      escreval ("Tempo total convertido em minutos: ", tempoMin:1:0, "m e ", tempoSeg:4:2, "s.")
     senao
-      escreval ("Tempo estimado até o computador encontrar a resposta : ",tempoEstimado:4:2, "s.")
+      escreval ("Tempo total estimado em segundos: ", tempoEstimado:4:2, "s.")
     fimse
 Fimalgoritmo
