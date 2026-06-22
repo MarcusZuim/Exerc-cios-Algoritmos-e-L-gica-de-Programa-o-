@@ -172,4 +172,13 @@ cont <- 1
   escreval ("Deseja continuar? [S/N]")
   leia (resp)
   ate (maiusc(resp) = "N")
+    se (xVencedor > oVencedor) entao
+      escreval ("O jogador [X] venceu! ganhou ",xVencedor, " vezes!")
+    senao
+      se (xVencedor < oVencedor) entao
+        escreval ("O jogador [O] venceu! ganhou ",oVencedor, " vezes!")
+      senao
+        escreval ("O jogo terminou empatado! Ambos venceram ",xVencedor, " vezes")
+      fimse
+    fimse
 Fimalgoritmo
